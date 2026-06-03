@@ -1,0 +1,38 @@
+.font-handwriting { font-family: 'Caveat', cursive; }
+.font-sans { font-family: 'Quicksand', sans-serif; }
+
+/* UPGRADED GLASSMORPHISM */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.25); /* Slightly more transparent to let background show */
+    backdrop-filter: blur(16px); /* Stronger frosted blur */
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.7); /* Light-catching top edge */
+    border-left: 1px solid rgba(255, 255, 255, 0.7); /* Light-catching left edge */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15); /* Slightly deeper shadow for pop */
+}
+
+/* Scroll Animation Classes */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+
+/* Floating Stickers Animation */
+@keyframes float-sticker {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-40px) rotate(15deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-sticker {
+    animation: float-sticker 15s ease-in-out infinite;
+}
